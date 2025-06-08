@@ -1,0 +1,407 @@
+/* ===== Reset Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f0a500;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-list li {
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 16px;
+  font-size: 24px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+.social-links a {
+  color: #f0a500;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .projects__container {
+    flex-direction: column;
+  }
+
+  .project {
+    flex: 1 1 100%;
+  }
+}
+
+/* === MOBILE VIEW === */
+@media (max-width: 768px) {
+  .projects__container {
+    flex-direction: column;
+  }
+
+  .project {
+    flex: 1 1 100%; /* Stack projects on small screen */
+  }
+}
+
+/* ===== About Section Headings Spacing Adjustment ===== */
+#about h1,
+#about h2 {
+  margin-top: 0;
+  margin-bottom: 8px;  /* smaller gap */
+  line-height: 1.2;
+}
+#about p {
+  text-align: justify;
+}
+
+
+
+/*.skills__container {
+  display: flex;
+  flex-wrap: nowrap;       /* Prevent wrapping to keep image and list side by side 
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+} */
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/*.skills__left {
+  flex: 0 0 500px;         /* Fix width for skills box, smaller than before 
+  max-width: 500px;
+}
+
+.skills__right {
+  flex: 1;                 /* Take remaining space for image 
+}
+*/
+
+.skills__left,
+.skills__right {
+  flex: 1 1 48%;  /* Take up almost 50% each, leaving gap room */
+  max-width: 48%;
+}
+
+.skills__right img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.skills__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text+icon and percentage */
+  background: #f5f5f5;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+.skills__icon {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #f0a500;
+  flex-shrink: 0;
+}
+
+.skills__text-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+.skills__language {
+  /* No extra margin needed */
+}
+
+.skills__percent {
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0;
+  min-width: 40px;          /* Fix width so all percentages align nicely */
+  text-align: right;
+}
+
+#skills {
+  background-image: url('assets/bg-animation.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* ===== Background Animation for Entire Page ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('assets/animation1.mov.crdownload'); /* Make sure this path is correct C:\Users\briji\OneDrive\Documents\portfolio\assets\animation1.mov.crdownload*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed while scrolling */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Remove background from skills section ===== */
+#skills {
+  background: none; /* Ensures no extra bg over body */
+}
+
+
+body {
+  background-image: url('assets/background2.jpg'); /* your image path */
+  background-size: cover;          /* Make the image cover the entire viewport */
+  background-repeat: no-repeat;    /* Prevent tiling */
+  background-position: center;     /* Center the image */
+  background-attachment: fixed;    /* Optional: makes the background fixed during scroll */
+  /* You can add a fallback background color */
+  background-color: #f9f9f9;
+}
+
+
+/* Change the default text color to white for better contrast */
+body {
+  color: #eee; /* lighter text */
+}
+
+/* Add a dark transparent overlay behind the main content */
+main {
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Make section headings white */
+h1, h2 {
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Paragraph text also lighter with some shadow */
+p {
+  color: #ddd;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* For project boxes, add a semi-transparent background */
+.project {
+  background: rgba(255, 255, 255, 0.1); /* translucent white */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* For skills list items */
+.skills__list li {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+
+
+.skills__percent {
+  color: #fff; /* Make text white */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add subtle shadow for contrast */
+}
+
+
+.projects__container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex: 1 1 48%; /* Take up ~half the space with some gap */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+
+/* === PROJECTS LAYOUT STYLING === */
+.projects__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.project {
+  flex: 1 1 calc(50% - 20px); /* Two side-by-side on desktop */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;          /* ensures full width */
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
